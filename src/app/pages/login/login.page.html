@@ -1,0 +1,31 @@
+<ion-header> 
+  <ion-toolbar color="success">
+    <p>RECICLICA</p>
+    <p>Recycling keeps trash out of the landfill and conserves energy, RECICLICA helps you to achieve it...</p>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-content>  
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" placeholder="Enter Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" placeholder="Enter Password"></ion-input>
+        </ion-item>
+        <ion-button color="dark" fill="clear" size="full" (click)="forgotpassword()">Forgot Email/Password</ion-button>
+        <ion-button color="success" size="full" routerLink="/register">Login</ion-button>
+        <ion-label position="floating">Would you like to proceed as Guest?</ion-label>
+        <ion-button color="success" fill="clear" size="full" routerLink="/register">Guest Registration</ion-button>
+      </ion-card-content>
+    </ion-card>
+ </div>
+</ion-content>

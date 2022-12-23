@@ -1,0 +1,38 @@
+<ion-menu contentId="main-content">
+  <ion-header >
+    <ion-toolbar color="success">
+      <ion-title>Reciclica</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"></ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar color="success">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Reciclica</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="" />
+        </ion-avatar>
+        <ion-label>
+          <h1>ABC</h1>
+          <p>Amount Gathered: <span class="money">$25.00</span></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <app-pickup-call-card></app-pickup-call-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="success">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+</div>

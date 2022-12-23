@@ -1,0 +1,115 @@
+<ion-header>   
+  <ion-toolbar color="success">
+    <p>RECICLICA</p>
+    <ion-title>Registration for the  request</ion-title>
+    <br/>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+    <ion-card-title>What do you want to do with recyclable waste?</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>   
+      <ion-radio-group>
+       <ion-card>
+        <ion-item>
+          <ion-label>I want to BUY it</ion-label>
+          <ion-radio value="CLIENT" slot="start"></ion-radio>          
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Paper including newspapers, magazines, and mixed paper</p>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Glass bottles and jars</p>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Rigid plastic products.</p>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Metal containers, including tin, aluminum, and steel cans</p>
+        </ion-item>
+      </ion-card>
+      <ion-card>
+        <ion-item>
+          <ion-label>I want to SELL it</ion-label>
+          <ion-radio value="PARTNER" slot="start"></ion-radio>
+        </ion-item>  
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Paper including newspapers, magazines, and mixed paper</p>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Glass bottles and jars</p>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Rigid plastic products.</p>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox slot="start"></ion-checkbox>
+          <p>Metal containers, including tin, aluminum, and steel cans</p>
+        </ion-item> 
+      </ion-card>
+      </ion-radio-group>    
+  </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+    <ion-card-title>Contact</ion-card-title>
+  </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input type="text" placeholder="Enter Name" id="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input type="text" placeholder="Enter Name" id="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" placeholder="Enter Email"></ion-input>
+      </ion-item>     
+          <ion-item>
+        <ion-label position="floating">Phone Number</ion-label>
+        <ion-input type="tel" placeholder="Phone Number"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Address Information</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input type="text" placeholder="Enter Address"></ion-input>
+      </ion-item>
+      <p>or, use button below to select your location automatically</p>
+      <ion-item>        
+      <div class="container"> 
+       <ion-button (click)="getCurrentAddress()">Use Current Location</ion-button>
+        <p>Your address for the Latitude: {{latitude}}, and Longitude: {{longitude}} has been retrieved.</p>
+      </div> 
+    </ion-item>  
+    <ion-item>
+      <div class="container">
+        <br/>
+        <ion-label>Upload photo of the bin</ion-label>
+        <br/>
+        <ion-label position="floating"></ion-label>
+        <img [src]="imgURL" height="200" width="200" />
+        <ion-button (click)="getCamera()">From Camera</ion-button>        
+      </div>
+    </ion-item>  
+    </ion-card-content>
+    
+  </ion-card>
+  <ion-button color="light" size="full" (click)="placerequest()">Register</ion-button>
+</ion-content>
